@@ -36,3 +36,38 @@ CREATE TABLE Ratings(user_id INT
                 
                 , FOREIGN KEY (user_id) REFERENCES User(user_id)
                 , FOREIGN KEY (song_id) REFERENCES Song(song_id));
+                
+CREATE TABLE Feature_Artist(artist_id INT
+				, song_id INT
+                
+                , PRIMARY KEY (artist_id, song_id)
+                
+                , FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
+                , FOREIGN KEY (song_id) REFERENCES Song(song_id));
+                
+use music_db;
+select * from Album;
+
+SELECT Album.album_id
+	, Album.album_name
+	, Album.album_duration
+    , Artist.artist_name
+FROM Album
+INNER JOIN Artist 
+ON Album.artist_id = Artist.artist_id;
+
+Select Song.song_id
+	, Song.song_name
+    , Song.song_duration
+    , Song.genre
+    , Album.album_name
+From Song
+INNER JOIN Album
+ON Song.album_id = Album.album_id;
+
+
+
+
+
+
+		
