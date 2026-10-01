@@ -17,7 +17,6 @@ CREATE TABLE Song(song_id INT auto_increment primary key
                 , album_id INT,
                 FOREIGN KEY (album_id) REFERENCES Album(album_id));
 
-
 CREATE TABLE User(user_id INT auto_increment primary key
 				, username VARCHAR(40)
                 , password VARCHAR(40));
@@ -45,29 +44,21 @@ CREATE TABLE Feature_Artist(artist_id INT
                 , FOREIGN KEY (artist_id) REFERENCES Artist(artist_id)
                 , FOREIGN KEY (song_id) REFERENCES Song(song_id));
                 
-use music_db;
-select * from Album;
+SELECT
+    Song.song_name,
+    Actual_Artist.artist_name AS artist,
+    Featured_Artist.artist_name AS featured_artist
+FROM Song
 
-SELECT Album.album_id
-	, Album.album_name
-	, Album.album_duration
-    , Artist.artist_name
-FROM Album
-INNER JOIN Artist 
-ON Album.artist_id = Artist.artist_id;
-
-Select Song.song_id
-	, Song.song_name
-    , Song.song_duration
-    , Song.genre
-    , Album.album_name
-From Song
 INNER JOIN Album
-ON Song.album_id = Album.album_id;
+    ON Song.album_id = Album.album_id
 
+INNER JOIN Artist AS Actual_Artist
+    ON Album.artist_id = Actual_Artist.artist_id
 
+LEFT JOIN Feature_Artist
+    ON Song.song_id = Feature_Artist.song_id
 
-
-
-
-		
+LEFT JOIN Artist AS Featured_Artist
+    ON Feature_Artist.artist_id = Featured_Artist.artist_id;
+    
