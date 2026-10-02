@@ -1,5 +1,5 @@
 CREATE TABLE Artist(artist_id INT auto_increment primary key
-				, artis_name Varchar(40)
+				, artist_name Varchar(40)
 				, monthly_listener int);
 
 CREATE TABLE Album(album_id INT auto_increment primary key
@@ -62,3 +62,18 @@ LEFT JOIN Feature_Artist
 LEFT JOIN Artist AS Featured_Artist
     ON Feature_Artist.artist_id = Featured_Artist.artist_id;
     
+SELECT 
+	Song.song_name
+	, car_rating 
+FROM Ratings
+
+INNER JOIN Song
+	ON Song.song_id = Ratings.song_id
+    
+    WHERE car_rating > 6
+    ORDER BY car_rating DESC;
+    
+Insert into artist (artist_name, monthly_listener)
+	value('Jose Rizal', 20);
+    
+select * from artist

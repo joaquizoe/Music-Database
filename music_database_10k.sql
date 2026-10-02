@@ -1,3 +1,13 @@
+/*
+* The sample data in this file was generated using AI for 
+* development and testing purposes.
+*
+* The songs, albums, and artists information are synthetic and
+* is not intended to represent real-world data.
+*
+* For future projects, we plan to replace every synthetic data
+* with actual songs, albums, and artists.
+*/
 SET FOREIGN_KEY_CHECKS = 1;
 
 INSERT INTO `Artist` (`artis_name`, `monthly_listener`) VALUES
