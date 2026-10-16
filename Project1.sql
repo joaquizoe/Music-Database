@@ -22,7 +22,7 @@ CREATE TABLE User(user_id INT auto_increment primary key
                 , password VARCHAR(40));
                 
 CREATE TABLE Ratings(user_id INT
-				, song_id INT 
+				, song_id INT
 				
                 , karaoke_rating INT
                 , car_rating INT
