@@ -77,3 +77,4 @@ Insert into artist (artist_name, monthly_listener)
 	value('Jose Rizal', 20);
     
 select * from artist
+
