@@ -1,4 +1,4 @@
--- Synthetic demo users and ratings for spotify_5000_with_featured_artists_artist_name.sql.
+  -- Synthetic demo users and ratings for spotify_5000_with_featured_artists_artist_name.sql.
 -- 120 fictional users and 12,000 simulated ratings covering all 5,000 songs.
 -- Usernames are invented and culturally varied; no ethnicity is inferred or assigned.
 -- Passwords are placeholder hashes, NOT usable authentication credentials.
