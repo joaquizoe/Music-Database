@@ -19,10 +19,7 @@ GROUP BY s.song_id, s.song_name, s.genre
 HAVING COUNT(*) >= 2
 ORDER BY s.song_name;
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 152a158ad3c73dbc4085ea2ef7024b8be5342376
 -- Create a query that includes at least one subquery (could be part of the previous query, or a separate one) 
 -- Intense Workout Playlist: songs that at least two users rated >= 7 for both workout and energy, and that nobody rated below 5 for workout
 SELECT s.song_id, s.song_name, s.genre
